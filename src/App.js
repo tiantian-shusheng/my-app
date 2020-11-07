@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Home from "./Home";
+import HooksPage from './HooksPage';
+import HooksReducer from './HooksReducer';
+import HocPage from './HocPage';
+import { Provider } from "./context";
+import "./App.css";
+
+const Provider22 = React.createContext().Provider;
+
+const store = {
+  name: "xiaoming"
+};
+const store2 = {
+  name: "2222"
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Provider value={store}>
+        <Home />
+      </Provider> */}
+      {/* <HooksPage /> */}
+      {/* <HooksReducer /> */}
+      <HocPage />
     </div>
   );
 }
